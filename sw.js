@@ -1,6 +1,6 @@
 
-const CACHE='travel-shell-48fabb936bdb';
-const FILES=["./","./index.html","./cloud-config.json","./favicon.svg","./otaru.jpg","./illustrations/travel-suitcase-v1.webp","./illustrations/travel-stamp-v1.webp","./assets/index-CClLAM0k.js","./assets/index-45VBAMdD.css"];
+const CACHE='travel-shell-353a62447f78';
+const FILES=["./","./index.html","./cloud-config.json","./favicon.svg","./otaru.jpg","./illustrations/travel-suitcase-v1.webp","./illustrations/travel-stamp-v1.webp","./assets/index-xgo3G7-9.js","./assets/index-CJMSYIOV.css"];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES))));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('travel-shell-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
